@@ -1,0 +1,30 @@
+// utilities
+@import 
+'utilities/variables',
+
+'utilities/mixins';
+
+//base
+@import 'base/reset',
+'base/base';
+
+
+
+@import 
+'layout/home-header',
+'layout/home-main',
+'layout/home-footer';
+
+
+@import
+'components/home-header-nav',
+'components/home-main-intro',
+'components/home-main-intro-adress',
+'components/home-main-restaurante',
+'components/home-main-orase',
+'components/footer-social',
+'components/categorii',
+'components/categori-flex',
+'components/card-restaurante',
+'components/alaturare-carduri',
+'components/alaturare-card';

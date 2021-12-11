@@ -1,0 +1,18 @@
+.home-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-right: 1rem;
+    padding-top: 0.5rem;
+    padding-left: 0rem;
+    padding-bottom: 0;
+    background-color: $blue;
+    border-bottom: 1px solid $yellow;
+
+    a{
+        img{
+            width: 130px;
+        }
+    }
+    
+}

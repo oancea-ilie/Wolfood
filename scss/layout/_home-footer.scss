@@ -1,0 +1,42 @@
+.home-footer{
+    height: 17rem;
+    background-color: black;
+    color: white;
+    text-align: center;
+
+    .brand-footer{
+        img{
+            margin-top: 1rem;
+            width: 130px;
+        }
+    }
+
+
+    .footer-social{
+        margin: 1rem 0;
+        i{
+            margin-right: 0.7rem;
+            font-size: 1.5rem;
+            transition: .3s all;
+            cursor: pointer;
+        }
+
+        i:last-of-type{
+           margin: 0;
+        }
+
+        i:hover{
+            color: $yellow;
+        }
+    }
+
+    a{
+        display: block;
+        font-size: 1.2rem;
+        color: white;
+        margin-bottom: 1rem;
+    }
+    a:hover{
+        color: $yellow;
+    }
+}

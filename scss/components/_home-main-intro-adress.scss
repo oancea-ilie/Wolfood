@@ -6,6 +6,7 @@
         margin-right: 0.5rem;
     }
     input{
+        margin-right: 1.8rem;
         transition: .1s all;
         width: 190px;
         color: $blue;
@@ -18,5 +19,18 @@
     input:focus{
         outline: none;
         border: 2px solid $yellow;
+    }
+
+    a{
+        display: inline-block;
+        text-decoration: none;
+        color: white;
+        padding: 0.4rem 1rem;
+        border-radius: 10px;
+        background-color: $yellow;
+        transition: .3s all;
+    }
+    a:hover{
+        background-color: $y-hover;
     }
 }

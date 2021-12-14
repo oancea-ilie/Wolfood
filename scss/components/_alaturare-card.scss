@@ -42,4 +42,40 @@
         color: white;
     }
     
+
+    @include mq('sm'){
+    
+        p{
+            padding: 0.3rem 1.5rem;
+            font-size: 1.3rem;
+        }
+    }
+
+    @include mq('md'){
+
+        margin-top: 1rem;
+        p{
+            font-size: 1.4rem;
+            padding: 0.3rem 2.5rem;
+        }
+
+        h2{
+            font-size: 1.8rem;
+        }
+
+        .parteneri{
+            margin-top: 1rem;
+        }
+    
+        img{
+            width: 70px;
+        }
+    
+        a{
+            width: 170px;
+            font-size: 1.3rem;
+            padding: 0.5rem 0rem;
+        }
+    
+    }
 }

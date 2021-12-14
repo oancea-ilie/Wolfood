@@ -345,33 +345,67 @@ template {
 }
 
 .home-header {
+  background-color: #2155ad;
+}
+.home-header .header-container {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-right: 1rem;
   padding-top: 0.5rem;
-  padding-left: 0rem;
-  padding-bottom: 0;
-  background-color: #2155ad;
   border-bottom: 1px solid #e9ae0d;
 }
-.home-header a img {
+.home-header .header-container a img {
   width: 130px;
+}
+@media (min-width: 425px) {
+  .home-header .header-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .home-header .header-container a img {
+    width: 140px;
+  }
+}
+@media (min-width: 768px) {
+  .home-header .header-container {
+    width: 90%;
+    margin: 0 auto;
+  }
+  .home-header .header-container a img {
+    width: 160px;
+  }
 }
 
 .home-main h1 {
   margin: 0;
 }
 .home-main svg {
-  margin-top: -4rem;
+  margin-top: -4.5rem;
 }
 .home-main .footer-wave {
   margin-top: 0.1rem;
   margin-bottom: -1rem;
 }
+@media (min-width: 425px) {
+  .home-main svg {
+    margin-top: -9rem;
+  }
+  .home-main .footer-wave {
+    margin-top: 0rem;
+  }
+}
+@media (min-width: 768px) {
+  .home-main svg {
+    margin-top: -12rem;
+  }
+  .home-main .footer-wave {
+    margin-top: 0rem;
+    margin-bottom: -2rem;
+  }
+}
 
 .home-footer {
-  height: 17rem;
+  height: 18rem;
   background-color: black;
   color: white;
   text-align: center;
@@ -403,6 +437,12 @@ template {
 }
 .home-footer a:hover {
   color: #e9ae0d;
+}
+@media (min-width: 425px) {
+  .home-footer .brand-footer img {
+    margin-top: 0rem;
+    width: 130px;
+  }
 }
 
 .login-header {
@@ -487,7 +527,8 @@ template {
   color: #e9ae0d;
 }
 
-.home-header nav a {
+nav a {
+  margin-right: 0.5rem;
   text-decoration: none;
   font-size: 1rem;
   color: #2155ad;
@@ -496,19 +537,29 @@ template {
   border-radius: 4px;
   transition: 0.3s all;
 }
-.home-header nav a:hover {
+nav a:hover {
   background-color: #e9ae0d;
   color: white;
 }
-.home-header nav i {
+nav i {
   display: none;
   font-size: 2rem;
   color: #e9ae0d;
   transition: 0.3s all;
   cursor: pointer;
 }
-.home-header nav i:hover {
+nav i:hover {
   color: #c89811;
+}
+@media (min-width: 425px) {
+  nav a {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 768px) {
+  nav a {
+    font-size: 1.3rem;
+  }
 }
 
 .home-main-intro {
@@ -520,9 +571,18 @@ template {
   text-align: center;
   padding: 1.5rem 0;
 }
+@media (min-width: 768px) {
+  .home-main-intro {
+    height: 25vh;
+  }
+  .home-main-intro h2 {
+    font-size: 2rem;
+  }
+}
 
 .adress {
   text-align: center;
+  position: relative;
 }
 .adress i {
   color: #e9ae0d;
@@ -530,6 +590,7 @@ template {
   margin-right: 0.5rem;
 }
 .adress input {
+  text-align: center;
   margin-right: 1.8rem;
   transition: 0.1s all;
   width: 190px;
@@ -545,7 +606,11 @@ template {
   border: 2px solid #e9ae0d;
 }
 .adress a {
-  display: inline-block;
+  z-index: 1;
+  left: 50%;
+  transform: translateX(-50%);
+  position: absolute;
+  display: block;
   text-decoration: none;
   color: white;
   padding: 0.4rem 1rem;
@@ -555,6 +620,32 @@ template {
 }
 .adress a:hover {
   background-color: #c89811;
+}
+@media (min-width: 425px) {
+  .adress i {
+    font-size: 1.5rem;
+  }
+  .adress input {
+    width: 210px;
+    font-size: 1.1rem;
+  }
+  .adress a {
+    font-size: 1.1rem;
+    padding: 0.4rem 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .adress i {
+    font-size: 1.6rem;
+  }
+  .adress input {
+    width: 250px;
+    font-size: 1.2rem;
+  }
+  .adress a {
+    font-size: 1.2rem;
+    padding: 0.4rem 2.5rem;
+  }
 }
 
 .home-main-restaurante h2 {
@@ -566,8 +657,8 @@ template {
 }
 .home-main-restaurante a {
   width: 80%;
-  margin: 1rem auto;
   display: block;
+  margin: 1.5rem auto 0 auto;
   text-decoration: none;
   text-align: center;
   background-color: #e9ae0d;
@@ -580,6 +671,31 @@ template {
 .home-main-restaurante a:hover {
   background-color: #c89811;
 }
+@media (min-width: 425px) {
+  .home-main-restaurante a {
+    width: 80%;
+    max-width: 400px;
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 768px) {
+  .home-main-restaurante .home-main-restaurante-cards-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .home-main-restaurante h2 {
+    font-size: 2rem;
+  }
+  .home-main-restaurante a {
+    width: 80%;
+    max-width: 500px;
+    border-radius: 15px;
+    font-size: 1.5rem;
+  }
+}
 
 .home-main-orase {
   margin-top: 2rem;
@@ -591,13 +707,13 @@ template {
   font-size: 1.8rem;
   text-align: center;
 }
-.home-main-orase .orase-container {
+.home-main-orase .all-orase .orase-container {
   border-radius: 5px;
   background-color: black;
   position: relative;
   margin-bottom: 0.8rem;
 }
-.home-main-orase .orase-container h3 {
+.home-main-orase .all-orase .orase-container h3 {
   cursor: pointer;
   z-index: 1;
   font-size: 1.5rem;
@@ -607,7 +723,7 @@ template {
   left: 50%;
   transform: translate(-50%, -50%);
 }
-.home-main-orase .orase-container img {
+.home-main-orase .all-orase .orase-container img {
   cursor: pointer;
   opacity: 0.8;
   transition: 0.2s all;
@@ -616,8 +732,36 @@ template {
   height: 5rem;
   width: 100%;
 }
-.home-main-orase .orase-container:hover img {
+.home-main-orase .all-orase .orase-container:hover img {
   box-shadow: -1px 2px 21px -5px #333333;
+}
+@media (min-width: 425px) {
+  .home-main-orase .all-orase .orase-container {
+    margin: 0 auto 0.8rem auto;
+    max-width: 450px;
+  }
+}
+@media (min-width: 768px) {
+  .home-main-orase h2 {
+    font-size: 2rem;
+  }
+  .home-main-orase .all-orase {
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 2.5rem;
+    max-width: 860px;
+  }
+  .home-main-orase .all-orase .orase-container {
+    width: 100%;
+  }
+  .home-main-orase .all-orase .orase-container h3 {
+    font-size: 1.7rem;
+  }
+  .home-main-orase .all-orase .orase-container img {
+    height: 7rem;
+    width: 100%;
+  }
 }
 
 .categorii {
@@ -629,18 +773,26 @@ template {
   text-align: center;
   margin-bottom: 2rem;
 }
+@media (min-width: 768px) {
+  .categorii h2 {
+    font-size: 2rem;
+  }
+}
 
 .categori-flex {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 30% 30%;
   grid-row-gap: 1rem;
+  justify-content: center;
+  align-items: center;
+  justify-items: center;
 }
 .categori-flex .categorie {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 150px;
+  width: 100px;
   cursor: pointer;
 }
 .categori-flex .categorie img {
@@ -648,19 +800,45 @@ template {
   border-radius: 20px;
   padding: 0.7rem;
   width: 60px;
+  transition: 0.2s all;
 }
 .categori-flex .categorie img:hover {
-  box-shadow: -1px 2px 21px -5px #333333;
+  box-shadow: -1px 2px 21px -5px #909090;
 }
 .categori-flex .categorie h4 {
   margin-top: 0.5rem;
 }
+@media (min-width: 425px) {
+  .categori-flex {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 450px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .categori-flex .categorie h4 {
+    font-size: 1.1rem;
+  }
+}
+@media (min-width: 768px) {
+  .categori-flex {
+    width: 80%;
+    margin: 0 auto;
+    max-width: 900px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .categori-flex .categorie {
+    width: 150px;
+  }
+  .categori-flex .categorie img {
+    padding: 0.7rem;
+    width: 70px;
+  }
+  .categori-flex .categorie h4 {
+    font-size: 1.3rem;
+  }
+}
 
 .card-restaurante {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
   margin-bottom: 1rem;
 }
 .card-restaurante .card-img {
@@ -668,21 +846,22 @@ template {
   margin: 0 auto;
   background-color: black;
   position: relative;
-  max-width: 400px;
   border-radius: 10px;
   transition: 0.2s all;
   cursor: pointer;
-  height: 182px;
+  background-color: black;
+  max-width: 400px;
 }
 .card-restaurante .card-img img {
   border-radius: 10px;
   width: 100%;
   opacity: 0.8;
+  object-fit: contain;
 }
 .card-restaurante .card-img h2 {
   font-size: 1.5rem;
   z-index: 1;
-  top: 40%;
+  top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
   position: absolute;
@@ -694,9 +873,11 @@ template {
 .card-restaurante .card-info {
   align-items: center;
   display: flex;
+  width: 95%;
+  max-width: 400px;
+  margin: 0 auto;
   margin-top: 1rem;
   justify-content: space-between;
-  width: 100%;
   padding: 0 1.2rem;
 }
 .card-restaurante .card-info div i {
@@ -707,15 +888,55 @@ template {
 .card-restaurante .card-info div p {
   display: inline;
 }
+.card-restaurante .card-info div:last-of-type {
+  margin-right: 0;
+}
 .card-restaurante .card-info h4 {
   margin-top: 0.1rem;
+}
+@media (min-width: 425px) {
+  .card-restaurante .card-img {
+    width: 90%;
+    margin: 0 auto;
+    max-width: 450px;
+  }
+  .card-restaurante .card-img img {
+    width: 100%;
+  }
+  .card-restaurante .card-img h2 {
+    font-size: 1.5rem;
+  }
+  .card-restaurante .card-info {
+    width: 95%;
+    max-width: 450px;
+    padding: 0 1.2rem;
+  }
+  .card-restaurante .card-info div i {
+    font-size: 1.4rem;
+    margin-right: 0.3rem;
+  }
+  .card-restaurante .card-info div p {
+    font-size: 1.3rem;
+  }
+  .card-restaurante .card-info h4 {
+    font-size: 1.2rem;
+    margin-top: 0.1rem;
+  }
+}
+@media (min-width: 768px) {
+  .card-restaurante .card-img {
+    max-width: fit-content;
+  }
+  .card-restaurante .card-img h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .alaturare-carduri {
   margin: 2rem 1rem;
   text-align: center;
   position: relative;
-  background-color: #2154ad;
+  background-color: #2155ad;
   border-radius: 10px;
   padding-bottom: 1.5rem;
 }
@@ -731,6 +952,31 @@ template {
   font-size: 1.8rem;
   text-align: center;
   margin-bottom: 1.5rem;
+}
+@media (min-width: 425px) {
+  .alaturare-carduri {
+    width: 92%;
+    margin: 2rem auto;
+    max-width: 450px;
+  }
+}
+@media (min-width: 768px) {
+  .alaturare-carduri {
+    width: 96%;
+    margin: 2rem auto;
+    max-width: 860px;
+  }
+  .alaturare-carduri img {
+    width: 100px;
+  }
+  .alaturare-carduri h1 {
+    font-size: 2rem;
+  }
+  .alaturare-carduri .alaturare-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
 }
 
 .alaturare-card h2 {
@@ -768,6 +1014,35 @@ template {
 .alaturare-card a:hover {
   background-color: #e9ae0d;
   color: white;
+}
+@media (min-width: 425px) {
+  .alaturare-card p {
+    padding: 0.3rem 1.5rem;
+    font-size: 1.3rem;
+  }
+}
+@media (min-width: 768px) {
+  .alaturare-card {
+    margin-top: 1rem;
+  }
+  .alaturare-card p {
+    font-size: 1.4rem;
+    padding: 0.3rem 2.5rem;
+  }
+  .alaturare-card h2 {
+    font-size: 1.8rem;
+  }
+  .alaturare-card .parteneri {
+    margin-top: 1rem;
+  }
+  .alaturare-card img {
+    width: 70px;
+  }
+  .alaturare-card a {
+    width: 170px;
+    font-size: 1.3rem;
+    padding: 0.5rem 0rem;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

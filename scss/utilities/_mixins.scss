@@ -17,6 +17,7 @@
             @content;
         }
     }
+    
     @else{
 
         @media(min-width:$value){

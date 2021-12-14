@@ -5,11 +5,34 @@
     }
 
     svg{
-        margin-top: -4rem;
+        margin-top: -4.5rem;
     }
     
     .footer-wave{
         margin-top: 0.1rem;
         margin-bottom: -1rem;
+    }
+
+    
+    @include mq('sm'){
+        svg{
+            margin-top: -9rem;
+        }
+
+        .footer-wave{
+            margin-top: 0rem;
+            
+        }
+    }
+
+    @include mq('md'){
+        svg{
+            margin-top: -12rem;
+        }
+
+        .footer-wave{
+            margin-top: 0rem;
+            margin-bottom: -2rem;
+        }
     }
 }

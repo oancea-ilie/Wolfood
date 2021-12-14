@@ -10,8 +10,8 @@
 
     a{
         width: 80%;
-        margin: 1rem auto;
         display: block;
+        margin: 1.5rem auto 0 auto;
         text-decoration: none;
         text-align: center;
         background-color: $yellow;
@@ -23,5 +23,34 @@
     }
     a:hover{
         background-color: $y-hover;
+    }
+
+    @include mq('sm'){
+        a{
+            width: 80%;
+            max-width: 400px;
+            font-size: 1.3rem;
+        }
+    }
+
+    @include mq('md'){
+        .home-main-restaurante-cards-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 0;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        h2{
+            font-size: 2rem;
+        }
+
+        a{
+            width: 80%;
+            max-width: 500px;
+            border-radius: 15px;
+            font-size: 1.5rem;
+        }
     }
 }

@@ -2,9 +2,8 @@
     margin: 2rem 1rem;
     text-align: center;
     position: relative;
-    background-color: #2154ad;
+    background-color: $blue;
     border-radius: 10px;
-
     padding-bottom: 1.5rem;
 
     img{
@@ -21,5 +20,35 @@
         text-align: center;
         margin-bottom: 1.5rem;
     }
+
+    @include mq('sm'){
+        width: 92%;
+        margin: 2rem auto;
+        max-width: 450px;
+    }
     
+
+    @include mq('md'){
+        width: 96%;
+        margin: 2rem auto;
+        max-width: 860px;
+
+        img{
+            width: 100px;
+
+        }
+        
+        h1{
+            font-size: 2rem;
+        }
+    
+
+        .alaturare-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
+            // background-color: gray;
+            
+        }
+    }
 }

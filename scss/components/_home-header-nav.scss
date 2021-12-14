@@ -1,6 +1,7 @@
-.home-header nav{
+nav{
     
     a{
+        margin-right: 0.5rem;
         text-decoration: none;
         font-size: 1rem;
         color: $blue;
@@ -24,5 +25,19 @@
     }
     i:hover{
         color: $y-hover;
+    }
+
+    @include mq('sm'){
+
+        a{
+            font-size: 1.1rem;
+        }
+    }
+
+    @include mq('md'){
+
+        a{
+            font-size: 1.3rem;
+        }
     }
 }

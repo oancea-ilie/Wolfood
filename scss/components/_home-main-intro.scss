@@ -8,4 +8,13 @@
         padding: 1.5rem 0;
     }
 
+    @include mq('md'){
+        
+    height: 25vh;
+
+        h2{
+            font-size: 2rem;
+        }
+    }
+
 }

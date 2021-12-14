@@ -1,5 +1,5 @@
 .home-footer{
-    height: 17rem;
+    height: 18rem;
     background-color: black;
     color: white;
     text-align: center;
@@ -38,5 +38,16 @@
     }
     a:hover{
         color: $yellow;
+    }
+
+
+    @include mq('sm'){
+
+        .brand-footer{
+            img{
+                margin-top: 0rem;
+                width: 130px;
+            }
+        }
     }
 }

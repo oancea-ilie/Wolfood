@@ -66,4 +66,24 @@
     
         }
     }
+    @include mq('lg'){
+        width: 80%;
+        margin: 0 auto;
+        max-width: 1000px;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        
+        .categorie{
+            width: 150px;
+    
+            img{
+                padding: 0.7rem;
+                width: 80px;
+            }
+
+            h4{
+                font-size: 1.3rem;
+            }
+    
+        }
+    }
 }

@@ -47,8 +47,30 @@
             display: grid;
             grid-template-columns: 1fr 1fr;
             grid-gap: 1rem;
-            // background-color: gray;
-            
+        }
+    }
+
+    @include mq('lg'){
+        width: 95%;
+        margin: 2rem auto;
+        max-width: 1075px;
+        padding: 2rem;
+        padding-bottom: 3rem;
+
+        img{
+            width: 100px;
+
+        }
+        
+        h1{
+            font-size: 2rem;
+        }
+    
+
+        .alaturare-container{
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-gap: 1rem;
         }
     }
 }

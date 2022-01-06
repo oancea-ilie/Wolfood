@@ -35,4 +35,15 @@
             margin-bottom: -2rem;
         }
     }
+
+    @include mq('lg'){
+        svg{
+            margin-top: -19rem;
+        }
+    }
+    @include mq('xlg'){
+        svg{
+            margin-top: -21rem;
+        }
+    }
 }

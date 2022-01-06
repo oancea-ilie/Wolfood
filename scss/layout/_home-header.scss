@@ -9,6 +9,9 @@
         border-bottom: 1px solid $yellow;
     
         a{
+            z-index: 1;
+            position: relative;
+            
             img{
                 width: 130px;
             }
@@ -35,6 +38,18 @@
                 }
             }
         }
+
+        @include mq('lg'){
+            width: 80%;
+            margin: 0 auto;
+
+            a{
+                img{
+                    width: 160px;
+                }
+            }
+        }
+        
     }
 
 

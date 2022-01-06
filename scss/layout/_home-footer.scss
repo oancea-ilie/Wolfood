@@ -50,4 +50,24 @@
             }
         }
     }
+
+    @include mq('md'){
+        height: 230px;
+        .brand-footer{
+            img{
+                margin-top: -2rem;
+                width: 140px;
+            }
+        }
+    }
+
+    @include mq('lg'){
+        height: 230px;
+        .brand-footer{
+            img{
+                margin-top: -2rem;
+                width: 140px;
+            }
+        }
+    }
 }
